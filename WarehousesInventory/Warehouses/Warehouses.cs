@@ -4,43 +4,43 @@ namespace WarehousesInventory
 {
     public class Warehouses
     {
-        private Dictionary<string, WarehouseBatchs> batchs = new Dictionary<string, WarehouseBatchs>();
+        private Dictionary<string, WarehouseBatches> batches = new Dictionary<string, WarehouseBatches>();
 
         public void Add(string warehouse, Batch batch)
         {
-            if (!batchs.ContainsKey(warehouse))
+            if (!batches.ContainsKey(warehouse))
             {
-                batchs.Add(warehouse, new WarehouseBatchs());
+                batches.Add(warehouse, new WarehouseBatches());
             }
 
-            batchs[warehouse].Add(batch);
+            batches[warehouse].Add(batch);
         }
 
-        public WarehouseBatchs Filter(string warehouse)
+        public WarehouseBatches Filter(string warehouse)
         {
-            if (!batchs.ContainsKey(warehouse))
+            if (!batches.ContainsKey(warehouse))
             {
-                return new WarehouseBatchs();
+                return new WarehouseBatches();
             }
 
-            return batchs[warehouse];
+            return batches[warehouse];
         }
 
-        public WarehouseBatchs Filter(PartDescription partDescription)
+        public WarehouseBatches Filter(PartDescription partDescription)
         {
             if (!Exists(partDescription))
             {
-                return new WarehouseBatchs();
+                return new WarehouseBatches();
             }
 
-            return batchs[partDescription.Warehouse].FindBatchsBy(partDescription.PartType);
+            return batches[partDescription.Warehouse].FindBatchesBy(partDescription.PartType);
         }
 
         private bool Exists(PartDescription partDescription)
         {
-            if (!batchs.ContainsKey(partDescription.Warehouse)) return false;
+            if (!batches.ContainsKey(partDescription.Warehouse)) return false;
 
-            return batchs[partDescription.Warehouse].Exists(partDescription.PartType);
+            return batches[partDescription.Warehouse].Exists(partDescription.PartType);
         }
     }
 }

@@ -4,6 +4,6 @@ namespace WarehousesInventory
 {
     public interface IPriceStrategy
     {
-        IEnumerable<Batch> Apply(IEnumerable<Batch> batchs);
+        IEnumerable<Batch> Apply(IEnumerable<Batch> batches);
     }
 }

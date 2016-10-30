@@ -4,11 +4,11 @@ namespace WarehousesInventory
 {
     public class Inventory
     {
-        private Warehouses warehousesBatchs = new Warehouses();
+        private Warehouses warehousesBatches = new Warehouses();
 
         public PartCost PreviewCheckOut(PartDescription partDescription, int quantity, IPriceStrategy priceStrategy)
         {
-            int totalPrice = warehousesBatchs.Filter(partDescription)
+            int totalPrice = warehousesBatches.Filter(partDescription)
                                              .AccumulatePrice(quantity, priceStrategy);
 
             return new PartCost(totalPrice);
@@ -16,24 +16,24 @@ namespace WarehousesInventory
 
         public void CheckIn(Batch batch, string warehouse)
         {
-            warehousesBatchs.Add(warehouse, batch);
+            warehousesBatches.Add(warehouse, batch);
         }
 
         public void CheckOut(PartDescription partDescription, int quantity, IPriceStrategy priceStrategy)
         {
-            warehousesBatchs.Filter(partDescription)
+            warehousesBatches.Filter(partDescription)
                             .ReduceStock(quantity, priceStrategy);
         }
 
         public int GetQuantity(PartDescription partDescription)
         {
-            return warehousesBatchs.Filter(partDescription)
+            return warehousesBatches.Filter(partDescription)
                                    .GetRemainingParts();
         }
 
-        public IList<Batch> GetWarehouseBatchs(string warehouse)
+        public IList<Batch> GetWarehouseBatches(string warehouse)
         {
-            return warehousesBatchs.Filter(warehouse).ToList();
+            return warehousesBatches.Filter(warehouse).ToList();
         }
     }
 }

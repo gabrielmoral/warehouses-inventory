@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Warehouses\Batch.cs" />
-    <Compile Include="Warehouses\WarehouseBatchs.cs" />
+    <Compile Include="Warehouses\WarehouseBatches.cs" />
     <Compile Include="PriceStrategies\IPriceStrategy.cs" />
     <Compile Include="PriceStrategies\LifoPriceStrategy.cs" />
     <Compile Include="Part\PartDescription.cs" />

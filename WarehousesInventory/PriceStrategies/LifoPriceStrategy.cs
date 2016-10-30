@@ -5,9 +5,9 @@ namespace WarehousesInventory
 {
     public class LifoPriceStrategy : IPriceStrategy
     {
-        public IEnumerable<Batch> Apply(IEnumerable<Batch> batchs)
+        public IEnumerable<Batch> Apply(IEnumerable<Batch> batches)
         {
-            return batchs.Reverse();
+            return batches.Reverse();
         }
     }
 }

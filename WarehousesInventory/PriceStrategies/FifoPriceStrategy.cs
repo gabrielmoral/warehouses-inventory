@@ -4,9 +4,9 @@ namespace WarehousesInventory
 {
     public class FifoPriceStrategy : IPriceStrategy
     {
-        public IEnumerable<Batch> Apply(IEnumerable<Batch> batchs)
+        public IEnumerable<Batch> Apply(IEnumerable<Batch> batches)
         {
-            return batchs;
+            return batches;
         }
     }
 }

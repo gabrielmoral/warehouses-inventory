@@ -58,7 +58,7 @@ namespace WarehousesInventory.Test
         }
 
         [TestMethod]
-        public void Return_Cost_Having_Several_Batchs_Of_That_Part_With_FIFO_Strategy()
+        public void Return_Cost_Having_Several_Batches_Of_That_Part_With_FIFO_Strategy()
         {
             const string partType = "Part A";
             const string warehouse = "Dublin";
@@ -78,7 +78,7 @@ namespace WarehousesInventory.Test
         }
 
         [TestMethod]
-        public void Return_Cost_Having_Several_Batchs_Of_That_Part_With_LIFO_Strategy()
+        public void Return_Cost_Having_Several_Batches_Of_That_Part_With_LIFO_Strategy()
         {
             const string partType = "Part A";
             const string warehouse = "Dublin";
@@ -119,7 +119,7 @@ namespace WarehousesInventory.Test
         }
 
         [TestMethod]
-        public void Extract_Batchs_Per_Warehouse()
+        public void Extract_Batches_Per_Warehouse()
         {
             const string warehouse = "Dublin";
 
@@ -132,17 +132,17 @@ namespace WarehousesInventory.Test
             inventory.CheckIn(batch2, warehouse);
             inventory.CheckIn(batch3, "Cork");
 
-            IList<Batch> dublinBatchs = inventory.GetWarehouseBatchs(warehouse);
+            IList<Batch> dublinBatches = inventory.GetWarehouseBatches(warehouse);
 
-            var partABatch = dublinBatchs.First();
-            var partBBatch = dublinBatchs.Last();
+            var partABatch = dublinBatches.First();
+            var partBBatch = dublinBatches.Last();
 
             partABatch.GetTotalBatchPrice().Should().Be(200);
             partABatch.Quantity.Should().Be(2);
             partBBatch.GetTotalBatchPrice().Should().Be(540);
             partBBatch.Quantity.Should().Be(4);
 
-            dublinBatchs.Should().HaveCount(2);
+            dublinBatches.Should().HaveCount(2);
         }
     }
 }

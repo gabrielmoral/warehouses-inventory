@@ -13,9 +13,9 @@ namespace WarehousesInventory
             this.remainingQuantity = quantity;
         }
 
-        public void Process(IEnumerable<Batch> batchs, Action<int, Batch> action)
+        public void Process(IEnumerable<Batch> batches, Action<int, Batch> action)
         {
-            batchs.ToList().ForEach(batch =>
+            batches.ToList().ForEach(batch =>
             {
                 if (QuantityIsProcessed()) return;
 
