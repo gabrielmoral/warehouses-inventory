@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehousesInventory.Test", "WarehousesInventory.Test\WarehousesInventory.Test.csproj", "{B1FB03A2-C896-4E0E-91CB-C639BB6B9341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehousesInventory", "WarehousesInventory\WarehousesInventory.csproj", "{7D59290F-24CF-42A8-87DF-520C52B3B69D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1FB03A2-C896-4E0E-91CB-C639BB6B9341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FB03A2-C896-4E0E-91CB-C639BB6B9341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FB03A2-C896-4E0E-91CB-C639BB6B9341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FB03A2-C896-4E0E-91CB-C639BB6B9341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D59290F-24CF-42A8-87DF-520C52B3B69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D59290F-24CF-42A8-87DF-520C52B3B69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D59290F-24CF-42A8-87DF-520C52B3B69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D59290F-24CF-42A8-87DF-520C52B3B69D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
